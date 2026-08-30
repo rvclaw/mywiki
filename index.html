@@ -939,6 +939,112 @@
         grid-template-columns: 1fr;
       }
     }
+  
+    /* ==========================================================================
+       RECENT ARTICLES SECTION
+       ========================================================================== */
+    .recent-articles-section {
+      position: relative;
+    }
+
+    .recent-articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .recent-article-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .recent-article-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-color-hover);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), var(--shadow-glow);
+    }
+
+    .article-card-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: rgba(249, 115, 22, 0.15);
+      border: 1px solid var(--border-color);
+      color: var(--fire-orange);
+      padding: 0.3rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .article-card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.85rem;
+    }
+
+    .article-card-title a {
+      color: #fff;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .article-card-title a:hover {
+      color: var(--fire-amber);
+    }
+
+    .article-card-excerpt {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .article-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1rem;
+      margin-top: auto;
+    }
+
+    .article-card-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .article-read-btn {
+      color: var(--fire-orange);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: var(--transition);
+    }
+
+    .article-read-btn:hover {
+      color: #fff;
+      transform: translateX(3px);
+    }
+
   </style>
 </head>
 <body>
@@ -959,6 +1065,7 @@
           <li><a href="#facts" class="active">10 Mind-Blowing Facts</a></li>
           <li><a href="#raft-sim">Raft Physics Lab</a></li>
           <li><a href="#venom-index">Venom & Sting</a></li>
+          <li><a href="#recent-articles">Recent Articles</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#quiz">Survival Quiz</a></li>
         </ul>
@@ -1477,6 +1584,38 @@
             <span class="gallery-caption-sub">AntWeb Specimen CASENT0005804</span>
           </div>
         </div>
+      </div>
+    </section>
+
+    
+    <!-- Section: Recent Articles -->
+    <section id="recent-articles" class="recent-articles-section" style="margin-top: 5rem;">
+      <div class="section-header">
+        <span class="section-tag">Library & Archive</span>
+        <h2 class="section-title">Recent Articles</h2>
+        <p class="section-desc">
+          Explore our latest literary analyses, biological research papers, and curated archives.
+        </p>
+      </div>
+
+      <div class="recent-articles-grid">
+        <article class="recent-article-card">
+          <div class="article-card-badge">Featured Literature</div>
+          <h3 class="article-card-title">
+            <a href="http://myclaw.gajendrasinghdawar.tech/static/munsi-premchand-best-writing.html">
+              Munshi Premchand: Master of Realism &amp; His Greatest Writings
+            </a>
+          </h3>
+          <p class="article-card-excerpt">
+            An in-depth exploration of Dhanpat Rai Srivastava (Munshi Premchand), the 'Upanyas Samrat' of Hindi-Urdu literature. Discover deep analyses of masterpieces like Godaan, Kafan, Idgah, and Poos Ki Raat.
+          </p>
+          <div class="article-card-footer">
+            <span class="article-card-meta">8 min read • Aug 2026</span>
+            <a href="http://myclaw.gajendrasinghdawar.tech/static/munsi-premchand-best-writing.html" class="article-read-btn">
+              Read Article ➔
+            </a>
+          </div>
+        </article>
       </div>
     </section>
 
