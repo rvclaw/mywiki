@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Munshi Premchand: Master of Realism & His Greatest Writings | Literary Archive</title>
+  <meta name="description" content="An in-depth exploration of Munshi Premchand's greatest literary masterpieces including Godaan, Kafan, Idgah, Poos Ki Raat, and Nirmala." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-primary: #0a0d14;
+      --bg-secondary: #121824;
+      --bg-card: rgba(22, 30, 46, 0.75);
+      --bg-card-hover: rgba(30, 41, 64, 0.9);
+      --border-color: rgba(249, 115, 22, 0.2);
+      --border-color-hover: rgba(249, 115, 22, 0.5);
+      --fire-red: #ef4444;
+      --fire-orange: #f97316;
+      --fire-amber: #f59e0b;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 16px;
+      --radius-md: 10px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.7;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 13, 20, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .nav-brand span.highlight {
+      color: var(--fire-orange);
+    }
+
+    .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.4rem 0.9rem;
+      border-radius: 9999px;
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .nav-back:hover {
+      color: #fff;
+      border-color: var(--fire-orange);
+      background: rgba(249, 115, 22, 0.1);
+    }
+
+    /* Article Container */
+    .article-hero {
+      padding: 5rem 1.5rem 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(249, 115, 22, 0.15);
+      border: 1px solid var(--border-color);
+      color: var(--fire-orange);
+      padding: 0.35rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 1.25rem;
+    }
+
+    .article-meta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .article-body {
+      max-width: 840px;
+      margin: 0 auto 5rem;
+      padding: 0 1.5rem;
+    }
+
+    .lead-paragraph {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #e2e8f0;
+      margin-bottom: 2.5rem;
+      border-left: 3px solid var(--fire-orange);
+      padding-left: 1.25rem;
+    }
+
+    h2 {
+      font-family: var(--font-serif);
+      font-size: 1.85rem;
+      color: #fff;
+      margin: 3rem 0 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      color: #cbd5e1;
+      font-size: 1.05rem;
+    }
+
+    .work-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin: 2rem 0;
+      transition: var(--transition);
+    }
+
+    .work-card:hover {
+      border-color: var(--border-color-hover);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .work-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .work-title {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--fire-amber);
+      font-weight: 700;
+    }
+
+    .work-year {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    .work-quote {
+      font-style: italic;
+      color: #94a3b8;
+      border-left: 2px solid var(--fire-amber);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+
+    .key-takeaway {
+      background: rgba(249, 115, 22, 0.08);
+      border-left: 4px solid var(--fire-orange);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 2.5rem 0;
+    }
+
+    .key-takeaway h3 {
+      color: var(--fire-orange);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer {
+      border-top: 1px solid var(--border-color);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="/" class="nav-brand">
+      <span>📚 MyWiki<span class="highlight">.bio</span></span>
+    </a>
+    <a href="/" class="nav-back">← Back to Home</a>
+  </header>
+
+  <article>
+    <div class="article-hero">
+      <div class="badge">Featured Literary Masterpiece</div>
+      <h1 class="article-title">Munshi Premchand: Master of Realism & His Greatest Writings</h1>
+      <div class="article-meta">
+        <span>By Editorial Desk</span>
+        <span>•</span>
+        <span>Published Aug 2026</span>
+        <span>•</span>
+        <span>8 min read</span>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <p class="lead-paragraph">
+        Dhanpat Rai Srivastava (31 July 1880 – 8 October 1936), revered across the subcontinent as <strong>Munshi Premchand</strong> and bestowed with the honorific title <em>Upanyas Samrat</em> ("Emperor among Novelists"), revolutionized modern Hindi and Urdu literature by tearing down romanticized fantasies and pioneering unflinching social realism.
+      </p>
+
+      <h2>The Literary Revolution of Premchand</h2>
+      <p>
+        Prior to Premchand, northern Indian literature largely revolved around tales of fantasy, chivalric romances, kings, and courtly intrigues. Premchand anchored prose firmly into the dust and soil of the Indian village, depicting the struggles of impoverished farmers, bonded laborers, oppressed women, and the crushing weight of caste and colonial hierarchies.
+      </p>
+
+      <h2>Essential Masterpieces</h2>
+
+      <div class="work-card">
+        <div class="work-header">
+          <div class="work-title">1. Godaan (The Gift of a Cow)</div>
+          <div class="work-year">1936 • Novel</div>
+        </div>
+        <p>
+          Widely considered Premchand’s magnum opus and one of the finest Indian novels of the 20th century. It chronicles the tragedy of <em>Hori</em>, a poor peasant whose humble lifelong dream is to own a cow—a symbol of prosperity and religious fulfillment.
+        </p>
+        <div class="work-quote">
+          "The peasant's life is one long sacrifice; his labor enriches the money-lender, the landlord, and the priest, leaving only ashes for his hearth."
+        </div>
+        <p>
+          Through Hori's harrowing trajectory, Premchand exposes how rural debt, religious orthodoxy, and the zamindari system conspire to dismantle the dignity of the Indian working class.
+        </p>
+      </div>
+
+      <div class="work-card">
+        <div class="work-header">
+          <div class="work-title">2. Kafan (The Shroud)</div>
+          <div class="work-year">1936 • Short Story</div>
+        </div>
+        <p>
+          A devastating critique of extreme deprivation and dehumanization. Ghisu and his son Madhav are destitute laborers whose poverty has eroded even the most basic human instincts of grief. When Madhav’s wife Budhiya dies in childbirth, the pair beg the village for money to buy her a funeral shroud—only to spend the donations on wine, fried fish, and puris.
+        </p>
+        <p>
+          Premchand refuses to romanticize poverty, demonstrating how persistent structural deprivation destroys the soul.
+        </p>
+      </div>
+
+      <div class="work-card">
+        <div class="work-header">
+          <div class="work-title">3. Idgah</div>
+          <div class="work-year">1933 • Short Story</div>
+        </div>
+        <p>
+          A touching story of emotional maturity and selfless love. Young Hamid, an orphaned four-year-old boy living with his impoverished grandmother Amina, visits the festive Eid fair with only three paise in his pocket. While his wealthier friends buy sweets, toys, and rides, Hamid uses his meager coins to buy a pair of iron tongs (<em>chimta</em>) so his grandmother will no longer burn her fingers while making rotis.
+        </p>
+      </div>
+
+      <div class="work-card">
+        <div class="work-header">
+          <div class="work-title">4. Poos Ki Raat (A Night in January)</div>
+          <div class="work-year">1930 • Short Story</div>
+        </div>
+        <p>
+          Halku, a tenant farmer, spends a sub-zero winter night guarding his sugarcane field alongside his loyal dog Jabra, unable to afford a blanket after surrendering his savings to the landlord. As wild animals destroy his crop, the sheer physical and psychological relief of being warmed by a bonfire leads him to accept financial ruin over enduring freezing agony.
+        </p>
+      </div>
+
+      <div class="work-card">
+        <div class="work-header">
+          <div class="work-title">5. Nirmala</div>
+          <div class="work-year">1928 • Novel</div>
+        </div>
+        <p>
+          A poignant social reform novel centered on the tragedy of a young girl forced into marriage with an elderly widower with sons near her own age. Premchand dissected dowry culture, mismatched marriages, and the systemic subjugation of women in early 20th-century society.
+        </p>
+      </div>
+
+      <div class="key-takeaway">
+        <h3>Core Themes & Lasting Legacy</h3>
+        <p style="margin-bottom: 0;">
+          Premchand wrote over a dozen novels and nearly 300 short stories (collected in <em>Mansarovar</em>). His craft seamlessly bridged Hindustani—combining the evocative vocabulary of Urdu with the expressive depth of Hindi—creating accessible, deeply human stories that continue to define Indian literature.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <footer class="footer">
+    <p>© 2026 MyWiki.bio • Hosted at myclaw.gajendrasinghdawar.tech</p>
+  </footer>
+
+</body>
+</html>
