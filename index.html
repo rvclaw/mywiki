@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Secret World of Fire Ants (Solenopsis invicta) | Ultimate Guide</title>
+  <meta name="description" content="Explore the 10 most mind-blowing facts, biology, rafting physics, venom chemistry, and survival mechanics of Fire Ants (Solenopsis invicta)." />
+  <style>
+    /* ==========================================================================
+       CSS RESET & DESIGN SYSTEM
+       ========================================================================== */
+    :root {
+      --bg-primary: #0a0d14;
+      --bg-secondary: #121824;
+      --bg-card: rgba(22, 30, 46, 0.75);
+      --bg-card-hover: rgba(30, 41, 64, 0.9);
+      --border-color: rgba(249, 115, 22, 0.2);
+      --border-color-hover: rgba(249, 115, 22, 0.5);
+      
+      --fire-red: #ef4444;
+      --fire-orange: #f97316;
+      --fire-amber: #f59e0b;
+      --fire-glow: rgba(249, 115, 22, 0.35);
+      
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+      
+      --accent-cyan: #06b6d4;
+      --accent-emerald: #10b981;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --shadow-glow: 0 0 25px rgba(249, 115, 22, 0.25);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-theme="amber"] {
+      --bg-primary: #150d0a;
+      --bg-secondary: #22140f;
+      --bg-card: rgba(38, 22, 16, 0.8);
+      --bg-card-hover: rgba(54, 31, 23, 0.9);
+      --border-color: rgba(239, 68, 68, 0.25);
+      --border-color-hover: rgba(239, 68, 68, 0.6);
+      --fire-glow: rgba(239, 68, 68, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Subtle background grid & particle canvas */
+    #ant-canvas-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    .app-container {
+      position: relative;
+      z-index: 1;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+    }
+
+    /* ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== */
+    .navbar {
+      position: sticky;
+      top: 1rem;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10, 13, 20, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-color);
+      border-radius: 9999px;
+      padding: 0.75rem 1.5rem;
+      margin: 1rem 0 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .nav-brand .icon-flame {
+      color: var(--fire-orange);
+      filter: drop-shadow(0 0 8px var(--fire-orange));
+      animation: pulse-glow 2s infinite alternate;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #fff;
+      background: rgba(249, 115, 22, 0.15);
+      border: 1px solid rgba(249, 115, 22, 0.3);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn-theme {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      color: var(--fire-amber);
+      padding: 0.45rem 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition);
+    }
+
+    .btn-theme:hover {
+      border-color: var(--fire-orange);
+      box-shadow: 0 0 12px var(--fire-glow);
+    }
+
+    /* ==========================================================================
+       HERO SECTION
+       ========================================================================== */
+    .hero {
+      padding: 4rem 1rem 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      color: #fca5a5;
+      padding: 0.4rem 1.1rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 4.25rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+      color: #fff;
+    }
+
+    .hero-title .gradient-text {
+      background: linear-gradient(135deg, #ff4500 0%, #f97316 50%, #fcd34d 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 25px rgba(249, 115, 22, 0.3));
+    }
+
+    .hero-subtitle {
+      max-width: 760px;
+      margin: 0 auto 2.5rem;
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .hero-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1rem;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-color-hover);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .stat-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--fire-red), var(--fire-orange));
+    }
+
+    .stat-number {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #fff;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       SECTION HEADERS & CONTROLS
+       ========================================================================== */
+    .section-header {
+      text-align: center;
+      margin: 5rem 0 2.5rem;
+      position: relative;
+    }
+
+    .section-tag {
+      color: var(--fire-orange);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0.75rem auto 0;
+      font-size: 1.05rem;
+    }
+
+    /* Filter Chips */
+    .filter-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+
+    .filter-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 0.45rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-chip:hover,
+    .filter-chip.active {
+      color: #fff;
+      background: var(--fire-orange);
+      border-color: var(--fire-orange);
+      box-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+    }
+
+    /* ==========================================================================
+       THE 10 FACTS GRID & CARDS
+       ========================================================================== */
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 2rem;
+    }
+
+    .fact-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .fact-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-color-hover);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), var(--shadow-glow);
+    }
+
+    .fact-card-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      background: #1e293b;
+      overflow: hidden;
+    }
+
+    .fact-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .fact-card:hover .fact-card-img {
+      transform: scale(1.06);
+    }
+
+    .fact-badge-number {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(10, 13, 20, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-color);
+      color: var(--fire-orange);
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      z-index: 2;
+    }
+
+    .fact-category-tag {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #e2e8f0;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    .fact-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .fact-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .fact-text {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .fact-scientific-callout {
+      background: rgba(15, 23, 42, 0.6);
+      border-left: 3px solid var(--fire-orange);
+      padding: 0.75rem 1rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin-bottom: 1.25rem;
+      font-size: 0.88rem;
+      color: #e2e8f0;
+    }
+
+    .fact-scientific-callout strong {
+      color: var(--fire-amber);
+      display: block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.2rem;
+    }
+
+    .fact-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.85rem;
+    }
+
+    .btn-action-sm {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--fire-orange);
+      padding: 0.35rem 0.8rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: var(--transition);
+    }
+
+    .btn-action-sm:hover {
+      background: rgba(249, 115, 22, 0.15);
+      border-color: var(--fire-orange);
+      color: #fff;
+    }
+
+    /* ==========================================================================
+       INTERACTIVE LAB 1: RAFT SIMULATOR
+       ========================================================================== */
+    .lab-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin-top: 3rem;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .sim-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .sim-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .canvas-wrapper {
+      position: relative;
+      background: #07101e;
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      aspect-ratio: 16 / 10;
+      box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.8);
+    }
+
+    #raft-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+      cursor: crosshair;
+    }
+
+    .canvas-overlay-tip {
+      position: absolute;
+      bottom: 0.75rem;
+      left: 0.75rem;
+      background: rgba(10, 13, 20, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.4rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      color: var(--accent-cyan);
+      pointer-events: none;
+    }
+
+    .sim-controls-panel {
+      background: var(--bg-secondary);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+    }
+
+    .sim-controls-panel h4 {
+      font-size: 1.15rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .control-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .control-group label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .sim-slider {
+      width: 100%;
+      accent-color: var(--fire-orange);
+      height: 6px;
+      background: #334155;
+      border-radius: 3px;
+      outline: none;
+    }
+
+    .sim-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+
+    .btn-sim {
+      padding: 0.6rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+      border: none;
+    }
+
+    .btn-sim-primary {
+      background: var(--fire-orange);
+      color: #fff;
+    }
+
+    .btn-sim-primary:hover {
+      background: #ea580c;
+      box-shadow: 0 0 15px rgba(249, 115, 22, 0.5);
+    }
+
+    .btn-sim-secondary {
+      background: #334155;
+      color: #e2e8f0;
+    }
+
+    .btn-sim-secondary:hover {
+      background: #475569;
+    }
+
+    /* ==========================================================================
+       VENOM & STING PAIN INDEX COMPARISON
+       ========================================================================== */
+    .pain-table-container {
+      overflow-x: auto;
+      margin-top: 2rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .pain-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+      background: var(--bg-card);
+    }
+
+    .pain-table th {
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--fire-amber);
+      padding: 1rem 1.25rem;
+      font-weight: 700;
+      border-bottom: 1px solid var(--border-color);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+    }
+
+    .pain-table td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: #e2e8f0;
+    }
+
+    .pain-table tr:hover {
+      background: rgba(249, 115, 22, 0.08);
+    }
+
+    .pain-meter-cell {
+      min-width: 140px;
+    }
+
+    .pain-meter-bar {
+      height: 8px;
+      background: #1e293b;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 0.3rem;
+    }
+
+    .pain-meter-fill {
+      height: 100%;
+      border-radius: 4px;
+    }
+
+    /* ==========================================================================
+       PHOTO GALLERY & LIGHTBOX
+       ========================================================================== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      aspect-ratio: 4 / 3;
+      cursor: pointer;
+      transition: var(--transition);
+      background: #1e293b;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.03);
+      border-color: var(--fire-orange);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-caption-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(10, 13, 20, 0.95) 0%, rgba(10, 13, 20, 0.2) 60%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.25rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-caption-overlay {
+      opacity: 1;
+    }
+
+    .gallery-caption-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .gallery-caption-sub {
+      font-size: 0.8rem;
+      color: var(--fire-amber);
+    }
+
+    /* Lightbox Modal */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 7, 12, 0.92);
+      backdrop-filter: blur(16px);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+    }
+
+    .lightbox-content {
+      max-width: 950px;
+      max-height: 90vh;
+      position: relative;
+      text-align: center;
+    }
+
+    .lightbox-content img {
+      max-width: 100%;
+      max-height: 75vh;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    }
+
+    .lightbox-caption {
+      margin-top: 1rem;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -3rem;
+      right: 0;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .lightbox-close:hover {
+      background: var(--fire-red);
+      border-color: var(--fire-red);
+    }
+
+    /* ==========================================================================
+       QUIZ SECTION
+       ========================================================================== */
+    .quiz-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      max-width: 780px;
+      margin: 2rem auto;
+      backdrop-filter: blur(14px);
+    }
+
+    .quiz-question-counter {
+      font-size: 0.85rem;
+      color: var(--fire-orange);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .quiz-question-text {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+
+    .quiz-options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .quiz-option-btn {
+      background: var(--bg-secondary);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-align: left;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .quiz-option-btn:hover {
+      background: rgba(249, 115, 22, 0.1);
+      border-color: var(--fire-orange);
+      color: #fff;
+    }
+
+    .quiz-option-btn.correct {
+      background: rgba(16, 185, 129, 0.2) !important;
+      border-color: var(--accent-emerald) !important;
+      color: #6ee7b7 !important;
+    }
+
+    .quiz-option-btn.wrong {
+      background: rgba(239, 68, 68, 0.2) !important;
+      border-color: var(--fire-red) !important;
+      color: #fca5a5 !important;
+    }
+
+    .quiz-explanation {
+      margin-top: 1.5rem;
+      padding: 1rem 1.25rem;
+      background: rgba(15, 23, 42, 0.8);
+      border-radius: var(--radius-sm);
+      border-left: 4px solid var(--accent-cyan);
+      display: none;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+
+    .quiz-next-btn {
+      margin-top: 1.5rem;
+      background: var(--fire-orange);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.75rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      cursor: pointer;
+      display: none;
+      transition: var(--transition);
+    }
+
+    .quiz-next-btn:hover {
+      background: #ea580c;
+      box-shadow: 0 0 15px rgba(249, 115, 22, 0.5);
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    .site-footer {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    .site-footer a {
+      color: var(--fire-orange);
+      text-decoration: none;
+    }
+
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animations */
+    @keyframes pulse-glow {
+      0% { filter: drop-shadow(0 0 4px var(--fire-orange)); }
+      100% { filter: drop-shadow(0 0 14px var(--fire-red)); }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        border-radius: var(--radius-md);
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+      .facts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Particle and interactive background simulation -->
+  <canvas id="ant-canvas-bg"></canvas>
+
+  <div class="app-container">
+
+    <!-- Top Navigation Bar -->
+    <header>
+      <nav class="navbar">
+        <a href="#hero" class="nav-brand">
+          <span class="icon-flame">🔥</span>
+          <span>FireAnts<span style="color:var(--fire-orange);">.bio</span></span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#facts" class="active">10 Mind-Blowing Facts</a></li>
+          <li><a href="#raft-sim">Raft Physics Lab</a></li>
+          <li><a href="#venom-index">Venom & Sting</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#quiz">Survival Quiz</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="btn-theme" id="theme-toggle" title="Toggle Amber Mode">
+            <span>✨ Mode</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-badge">
+        <span>🐜 Superorganism Deep Dive</span>
+      </div>
+      <h1 class="hero-title">
+        The Unstoppable Force of <br />
+        <span class="gradient-text">Red Fire Ants</span>
+      </h1>
+      <p class="hero-subtitle">
+        Meet <em>Solenopsis invicta</em>—the architects of self-healing living life rafts, masters of chromosomal supergenes, and possessors of alkaloid chemical stingers that conquer ecosystems worldwide.
+      </p>
+
+      <!-- Key Statistics Bar -->
+      <div class="hero-stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">500,000+</span>
+          <span class="stat-label">Ants per Colony</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">100 sec</span>
+          <span class="stat-label">To Form Life Raft</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">95%</span>
+          <span class="stat-label">Alkaloid Venom</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">600+</span>
+          <span class="stat-label">Supergene Locked DNA</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">500 Hz</span>
+          <span class="stat-label">Stridulation SOS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: 10 Most Interesting Things -->
+    <section id="facts">
+      <div class="section-header">
+        <span class="section-tag">Entomological Wonders</span>
+        <h2 class="section-title">The 10 Most Interesting Things About Fire Ants</h2>
+        <p class="section-desc">
+          From viscoelastic fluid physics to chemical warfare and brain-eating parasitoid enemies, discover why scientists rank fire ants among the planet's most formidable superorganisms.
+        </p>
+      </div>
+
+      <!-- Filter Chips -->
+      <div class="filter-container">
+        <button class="filter-chip active" data-filter="all">All 10 Facts</button>
+        <button class="filter-chip" data-filter="engineering">Physics & Architecture</button>
+        <button class="filter-chip" data-filter="venom">Venom & Defense</button>
+        <button class="filter-chip" data-filter="genetics">Genetics & Communication</button>
+        <button class="filter-chip" data-filter="ecology">Invasion & Predators</button>
+      </div>
+
+      <!-- Facts Grid -->
+      <div class="facts-grid" id="facts-container">
+
+        <!-- Fact 1 -->
+        <article class="fact-card" data-category="engineering">
+          <div class="fact-card-img-wrapper">
+            <span class="fact-badge-number">#1</span>
+            <span class="fact-category-tag">Physics</span>
+            <img class="fact-card-img" 
+                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Fire_ant_raft_greene_county.jpg/960px-Fire_ant_raft_greene_county.jpg" 
+                 alt="Fire Ant Raft on Water" 
+                 loading="lazy" />
+          </div>
+          <div class="fact-body">
+            <h3 class="fact-title">Living Unsinkable Life Rafts</h3>
+            <p class="fact-text">
+              During flash floods in their native South American floodplains and flood-prone US states, fire ants assemble into a self-healing, unsinkable living raft within 100 seconds. Linking legs and jaws with tarsal pads, they exhibit viscoelastic properties—behaving both like a liquid and an elastic solid!
+            </p>
+            <div class="fact-scientific-callout">
+              <strong>Hydrophobic Trapping</strong>
+              Their cuticles trap a thin layer of air bubbles (the <em>plastron</em>), allowing even bottom-layer submerged ants to breathe for weeks without drowning.
+            </div>
+            <div class="fact-footer">
+              <span style="color:var(--accent-cyan); font-weight:600;">Georgia Tech Fluid Dynamics</span>
+              <button class="btn-action-sm" onclick="scrollToSim()">Interactive Sim ➔</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fact 2 -->
+        <article class="fact-card" data-category="venom">
+          <div class="fact-card-img-wrapper">
+            <span class="fact-badge-number">#2</span>
+            <span class="fact-category-tag">Venom</span>
+            <img class="fact-card-img" 
+                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Solenopsis_fire_ant.jpg/960px-Solenopsis_fire_ant.jpg" 
+                 alt="Fire Ant Stinger and Mandibles" 
+                 loading="lazy" />
+          </div>
+          <div class="fact-body">
+            <h3 class="fact-title">They Anchor With Mandibles, Then Pivot to Sting</h3>
+            <p class="fact-text">
+              A widespread myth claims fire ants bite you. In reality, the bite is merely a mechanical anchor! Once the worker locks its serrated mandibles into your flesh, it arches its abdomen (gaster) forward and repeatedly drives its hypodermic stinger in an arc, delivering 6 to 8 stings per attack.
+            </p>
+            <div class="fact-scientific-callout">
+              <strong>Solenopsin Piperidine Alkaloid</strong>
+              Unlike wasps (protein venom) or standard ants (formic acid), fire ant venom is 95% oil-based piperidine alkaloids that cause burning necrosis and sterile pustules within 24 hours.
+            </div>
+            <div class="fact-footer">
+              <span style="color:var(--fire-amber); font-weight:600;">Schmidt Index: 1.2 (Intense Burn)</span>
+              <button class="btn-action-sm" onclick="showAnatomyModal()">View Anatomy</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fact 3 -->
+        <article class="fact-card" data-category="engineering">
+          <div class="fact-card-img-wrapper">
+            <span class="fact-badge-number">#3</span>
+            <span class="fact-category-tag">Architecture</span>
+            <img class="fact-card-img" 
+                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Fire_ant_mound_%2816371103174%29.jpg/960px-Fire_ant_mound_%2816371103174%29.jpg" 
+                 alt="Subterranean Fire Ant Mound" 
+                 loading="lazy" />
+          </div>
+          <div class="fact-body">
+            <h3 class="fact-title">Subterranean Megacities & Microclimate Shuttles</h3>
+            <p class="fact-text">
+              The visible surface mound is just the tip of an architectural marvel reaching up to 10–12 feet deep. The colony features ventilation chimneys, brood chambers, moisture traps, and escape tunnels spanning dozens of yards in all directions.
+            </p>
+            <div class="fact-scientific-callout">
+              <strong>Active Thermoregulation</strong>
+              Workers act as biological heaters, moving thousands of eggs to the warm sunlit upper chambers each morning and transporting them deep underground during frosty nights.
+            </div>
+            <div class="fact-footer">
+              <span style="color:#a78bfa; font-weight:600;">Tunnel Depth: Up to 3.5 Meters</span>
+              <button class="btn-action-sm" onclick="openLightbox('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Fire_ant_mound_%2816371103174%29.jpg/960px-Fire_ant_mound_%2816371103174%29.jpg', 'Massive Fire Ant Mound Cross Section')">Inspect Mound</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fact 4 -->
+        <article class="fact-card" data-category="genetics">
+          <div class="fact-card-img-wrapper">
+            <span class="fact-badge-number">#4</span>
+            <span class="fact-category-tag">Genetics</span>
+            <img class="fact-card-img" 
+                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Pupae_of_an_S._invicta_queen.png/960px-Pupae_of_an_S._invicta_queen.png" 
+                 alt="Queen Fire Ant Pupae" 
+                 loading="lazy" />
+          </div>
+          <div class="fact-body">
+            <h3 class="fact-title">The "Social Supergene" (Gp-9) & Multi-Queen Empires</h3>
+            <p class="fact-text">
+              Fire ant social structure is governed by a remarkable chromosomal "supergene"—a cluster of over 600 locked genes that do not recombine, functioning like human X/Y sex chromosomes. Colonies with the *B* allele are monogyne (single queen, strictly territorial), whereas colonies with the *b* variant are polygyne.
+            </p>
+            <div class="fact-scientific-callout">
+              <strong>Supercolony Cooperation</strong>
+              Polygyne nests cooperate with hundreds of reproductive queens, creating massive interconnected supercolonies with millions of workers without territorial warfare.
+            </div>
+            <div class="fact-footer">
+              <span style="color:var(--accent-emerald); font-weight:600;">Nature Genetics Discovery</span>
+              <button class="btn-action-sm" onclick="playBeep()">Audio Tone</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fact 5 -->
+        <article class="fact-card" data-category="genetics">
+          <div class="fact-card-img-wrapper">
+            <span class="fact-badge-number">#5</span>
+            <span class="fact-category-tag">Acoustics</span>
+            <img class="fact-card-img" 
+                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Solenopsis_invicta_casent0178135_dorsal_1.jpg/960px-Solenopsis_invicta_casent0178135_dorsal_1.jpg" 
+                 alt="Fire Ant Stridulation Waist File" 
+                 loading="lazy" />
+          </div>
+          <div class="fact-body">
+            <h3 class="fact-title">Acoustic SOS: Stridulating Waist Instruments</h3>
+            <p class="fact-text">
+              While famous for chemical pheromones, fire ants also communicate acoustically. By scraping a microscopic plectrum against a corrugated file on their waist (postpetiole), they produce ~500 Hz vibrations through the soil.
+            </p>
+            <div class="fact-scientific-callout">
+              <strong>Buried Rescue Coordination</strong>
+              When trapped in cave-ins caused by rain or footsteps, trapped worker ants stridulate an SOS chirp. Nearby nestmates detect the vibrations through their subgenual leg organs and dig straight to them!
+            </div>
+            <div class="fact-footer">
+              <span style="color:var(--fire-orange); font-weight:600;">Acoustic Rescue Frequency: 500 Hz</span>
+              <button class="btn-action-sm" onclick="synthesizeStridulation()">Listen to Chirp 🔊</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fact 6 -->
+        <article class="fact-card" data-category="venom">
+          <div class="fact-card-img-wrapper">
+            <span class="fact-badge-number">#6</span>
+            <span class="fact-category-tag">Defense</span>
+            <img class="fact-card-img" 
+                 src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80" 
+                 alt="Electrical Circuit Sparking" 
+                 loading="lazy" />
+          </div>
+          <div class="fact-body">
+            <h3 class="fact-title">Electrical Attraction & Power Grid Sabotage</h3>
+            <p class="fact-text">
+              Fire ants cause over $1 billion annually in damage to transformers, air conditioners, airport runway lights, and traffic controllers. When an ant bridges an electrical contact, it receives an alternating current shock.
+            </p>
+            <div class="fact-scientific-callout">
+              <strong>The Suicidal Cascade Loop</strong>
+              As the ant dies in spasms, it releases an alarm pheromone. Nestmates interpret this as an attack and swarm the switch contacts, piling up until thousands short-circuit the entire power grid!
+            </div>
+            <div class="fact-footer">
+              <span style="color:#f87171; font-weight:600;">$1B+ Annual Infrastructure Impact</span>
+              <button class="btn-action-sm" onclick="alert('⚡ Fire ants are particularly drawn to 60Hz magnetic fields and warm relay housings!')">Info</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fact 7 -->
+        <article class="fact-card" data-category="engineering">
+          <div class="fact-card-img-wrapper">
+            <span class="fact-badge-number">#7</span>
+            <span class="fact-category-tag">Physics</span>
+            <img class="fact-card-img" 
+                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Clump_of_Ants.jpg/960px-Clump_of_Ants.jpg" 
+                 alt="Living Ant Bridge and Tower" 
+                 loading="lazy" />
+          </div>
+          <div class="fact-body">
+            <h3 class="fact-title">Dynamic Tensile Bridges & Self-Rebuilding Towers</h3>
+            <p class="fact-text">
+              Fire ants form vertical towers that resemble the Eiffel Tower to climb out of rising waters, and horizontal suspension bridges to cross gaps. These structures are not static—they are dynamic living metamaterials!
+            </p>
+            <div class="fact-scientific-callout">
+              <strong>The Perpetual Ant Conveyor</strong>
+              Under their own weight, towers continuously sink. Ants at the bottom squeeze out and climb back to the apex, circulating continuously like a biological fountain that never collapses.
+            </div>
+            <div class="fact-footer">
+              <span style="color:var(--accent-cyan); font-weight:600;">Mechanical Metamaterials</span>
+              <button class="btn-action-sm" onclick="openLightbox('https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Clump_of_Ants.jpg/960px-Clump_of_Ants.jpg', 'Ant Aggregation & Tensile Clumping')">Zoom In</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fact 8 -->
+        <article class="fact-card" data-category="genetics">
+          <div class="fact-card-img-wrapper">
+            <span class="fact-badge-number">#8</span>
+            <span class="fact-category-tag">Hygiene</span>
+            <img class="fact-card-img" 
+                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Fire_ant_eggs.jpg/960px-Fire_ant_eggs.jpg" 
+                 alt="Fire Ant Eggs and Brood Care" 
+                 loading="lazy" />
+          </div>
+          <div class="fact-body">
+            <h3 class="fact-title">Strict Necrophoric Undertakers & Venom Antiseptics</h3>
+            <p class="fact-text">
+              Colony hygiene is ruthlessly maintained. When an ant dies, its scent changes over 48 hours as fatty acids (oleic acid) accumulate. Specialized "undertaker" ants immediately transport the corpse to external refuse heaps (middens) to prevent fungal outbreaks.
+            </p>
+            <div class="fact-scientific-callout">
+              <strong>Brood Disinfection</strong>
+              Workers regularly mist and lick their eggs with micro-doses of venom. Solenopsin acts as a potent antibacterial and antifungal shield against virulent soil pathogens.
+            </div>
+            <div class="fact-footer">
+              <span style="color:var(--accent-emerald); font-weight:600;">Chemical Sterilization</span>
+              <button class="btn-action-sm" onclick="openLightbox('https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Fire_ant_eggs.jpg/960px-Fire_ant_eggs.jpg', 'Fire Ant Brood & Nursery Care')">View Brood</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fact 9 -->
+        <article class="fact-card" data-category="ecology">
+          <div class="fact-card-img-wrapper">
+            <span class="fact-badge-number">#9</span>
+            <span class="fact-category-tag">Predators</span>
+            <img class="fact-card-img" 
+                 src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solenopsis_invicta_casent0005804_head_1.jpg" 
+                 alt="Macro Fire Ant Head Anatomy" 
+                 loading="lazy" />
+          </div>
+          <div class="fact-body">
+            <h3 class="fact-title">Their Arch-Nemesis: The Decapitating Phorid Fly</h3>
+            <p class="fact-text">
+              The fire ant's ultimate nightmare is the parasitoid *Pseudacteon* phorid fly. The female fly hovers above foraging workers and dive-bombs in a tenth of a second, injecting a single egg into the ant's thorax with a hypodermic ovipositor.
+            </p>
+            <div class="fact-scientific-callout">
+              <strong>Macabre Biocontrol</strong>
+              The maggot hatches, migrates into the ant's head capsule, devours its brain hemolymph, and secretes an enzyme that dissolves the neck membrane—popping the head off before the adult fly emerges!
+            </div>
+            <div class="fact-footer">
+              <span style="color:var(--fire-red); font-weight:600;">USDA Biocontrol Agent</span>
+              <button class="btn-action-sm" onclick="alert('🪰 When phorid flies are nearby, fire ants enter a freeze posture or flee underground, drastically reducing foraging!')">Phorid Fact</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fact 10 -->
+        <article class="fact-card" data-category="ecology">
+          <div class="fact-card-img-wrapper">
+            <span class="fact-badge-number">#10</span>
+            <span class="fact-category-tag">Invasion</span>
+            <img class="fact-card-img" 
+                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Fire_ants_01.jpg/960px-Fire_ants_01.jpg" 
+                 alt="Red Imported Fire Ants Aggregation" 
+                 loading="lazy" />
+          </div>
+          <div class="fact-body">
+            <h3 class="fact-title">"The Invincible": Global Ecological Takeover</h3>
+            <p class="fact-text">
+              Named <em>Solenopsis invicta</em> ("invincible"), they hitched a ride from South America to Mobile, Alabama around the 1930s inside cargo soil ballast. Since then, they have conquered over 300 million acres in the US, Australia, Taiwan, China, and made landfall in Europe (Sicily) in 2023.
+            </p>
+            <div class="fact-scientific-callout">
+              <strong>Ecosystem Disruption</strong>
+              They decimate ground-nesting birds, lizards, and turtles by attacking hatchlings en masse, and outcompete native harvester ants, permanently altering native biodiversity.
+            </div>
+            <div class="fact-footer">
+              <span style="color:#fbbf24; font-weight:600;">IUCN 100 Worst Invasive Species</span>
+              <button class="btn-action-sm" onclick="openLightbox('https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Fire_ants_01.jpg/960px-Fire_ants_01.jpg', 'Solenopsis invicta Worker Swarm')">View Swarm</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Section: Interactive Fire Ant Raft Simulator -->
+    <section id="raft-sim" class="lab-container">
+      <div class="section-header" style="margin-top: 0;">
+        <span class="section-tag">Interactive Physics Lab</span>
+        <h2 class="section-title">The Living Raft Simulator</h2>
+        <p class="section-desc">
+          Interact with a live superorganism simulation. Click or drag to displace ants or poke a breach in the floating colony, and observe how the ants dynamically distribute tension to seal breaches!
+        </p>
+      </div>
+
+      <div class="sim-layout">
+        <div class="canvas-wrapper">
+          <canvas id="raft-canvas"></canvas>
+          <div class="canvas-overlay-tip">💡 Click / Drag inside the water tank to poke the raft!</div>
+        </div>
+
+        <div class="sim-controls-panel">
+          <h4><span>⚙️</span> Colony Parameters</h4>
+          
+          <div class="control-group">
+            <label>
+              <span>Ant Population</span>
+              <span id="label-pop">120 Ants</span>
+            </label>
+            <input type="range" id="sim-pop" class="sim-slider" min="40" max="220" value="120" />
+          </div>
+
+          <div class="control-group">
+            <label>
+              <span>Surface Tension Cohesion</span>
+              <span id="label-tension">80%</span>
+            </label>
+            <input type="range" id="sim-tension" class="sim-slider" min="20" max="100" value="80" />
+          </div>
+
+          <div class="control-group">
+            <label>
+              <span>Flood Turbulence</span>
+              <span id="label-wave">Gentle Current</span>
+            </label>
+            <input type="range" id="sim-wave" class="sim-slider" min="0" max="100" value="25" />
+          </div>
+
+          <div class="sim-buttons">
+            <button class="btn-sim btn-sim-primary" id="btn-drop-rain">💧 Rain Storm</button>
+            <button class="btn-sim btn-sim-secondary" id="btn-reset-raft">🔄 Reassemble</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Venom & Sting Pain Comparison -->
+    <section id="venom-index" style="margin-top: 5rem;">
+      <div class="section-header">
+        <span class="section-tag">Toxinology & Medical Science</span>
+        <h2 class="section-title">Venom Chemistry & The Schmidt Pain Scale</h2>
+        <p class="section-desc">
+          How does the red fire ant compare with the world's most painful stings? Compare active alkaloid molecules, pain sensations, and biological effects.
+        </p>
+      </div>
+
+      <div class="pain-table-container">
+        <table class="pain-table">
+          <thead>
+            <tr>
+              <th>Insect Species</th>
+              <th>Common Name</th>
+              <th>Pain Score (0–4)</th>
+              <th>Key Venom Compounds</th>
+              <th>Sensation & Symptoms</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: rgba(249, 115, 22, 0.12);">
+              <td><strong><em>Solenopsis invicta</em></strong></td>
+              <td>Red Imported Fire Ant</td>
+              <td class="pain-meter-cell">
+                <strong>1.2 / 4.0</strong>
+                <div class="pain-meter-bar">
+                  <div class="pain-meter-fill" style="width:30%; background: linear-gradient(90deg, #f97316, #ef4444);"></div>
+                </div>
+              </td>
+              <td>95% Piperidine Alkaloids (<em>Solenopsin</em>)</td>
+              <td>Sharp, fiery burning; transforms into sterile white pustules within 24 hours; risk of anaphylaxis.</td>
+            </tr>
+            <tr>
+              <td><em>Apis mellifera</em></td>
+              <td>Western Honeybee</td>
+              <td class="pain-meter-cell">
+                <strong>2.0 / 4.0</strong>
+                <div class="pain-meter-bar">
+                  <div class="pain-meter-fill" style="width:50%; background: #eab308;"></div>
+                </div>
+              </td>
+              <td>Melittin, Apamin, Phospholipase A2</td>
+              <td>Burning, corrosive, hot like a match-head on skin; local erythema and swelling.</td>
+            </tr>
+            <tr>
+              <td><em>Pogonomyrmex barbatus</em></td>
+              <td>Red Harvester Ant</td>
+              <td class="pain-meter-cell">
+                <strong>3.0 / 4.0</strong>
+                <div class="pain-meter-bar">
+                  <div class="pain-meter-fill" style="width:75%; background: #f43f5e;"></div>
+                </div>
+              </td>
+              <td>Complex neurotoxic polypeptides</td>
+              <td>Bold and unrelenting; feels like somebody drilling into your ingrown toenail.</td>
+            </tr>
+            <tr>
+              <td><em>Paraponera clavata</em></td>
+              <td>Bullet Ant</td>
+              <td class="pain-meter-cell">
+                <strong>4.0+ / 4.0</strong>
+                <div class="pain-meter-bar">
+                  <div class="pain-meter-fill" style="width:100%; background: #b91c1c;"></div>
+                </div>
+              </td>
+              <td>Poneratoxin (neurotoxic peptide)</td>
+              <td>Pure, excruciating waves of burning agony lasting 24 hours; walking over flaming charcoal with 3-inch nails.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section: High-Res Photo Gallery -->
+    <section id="gallery" style="margin-top: 5rem;">
+      <div class="section-header">
+        <span class="section-tag">Macrophotography</span>
+        <h2 class="section-title">Fire Ant Gallery</h2>
+        <p class="section-desc">
+          Macro views of *Solenopsis invicta* anatomy, superorganism rafts, massive brood mounds, and worker castes. Click any image to inspect in full detail.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Fire_ant_raft_greene_county.jpg/960px-Fire_ant_raft_greene_county.jpg', 'Fire Ant Raft Floating During Flood Waters')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Fire_ant_raft_greene_county.jpg/960px-Fire_ant_raft_greene_county.jpg" alt="Ant Raft" loading="lazy" />
+          <div class="gallery-caption-overlay">
+            <span class="gallery-caption-title">Unsinkable Living Raft</span>
+            <span class="gallery-caption-sub">Greene County Flood Evacuation</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox('https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Fire_ants_01.jpg/960px-Fire_ants_01.jpg', 'Red Imported Fire Ant Worker Swarm (Solenopsis invicta)')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Fire_ants_01.jpg/960px-Fire_ants_01.jpg" alt="Fire Ant Swarm" loading="lazy" />
+          <div class="gallery-caption-overlay">
+            <span class="gallery-caption-title">Worker Swarm Feeding</span>
+            <span class="gallery-caption-sub">Aggressive Foraging Behavior</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Fire_ant_mound_%2816371103174%29.jpg/960px-Fire_ant_mound_%2816371103174%29.jpg', 'Huge Fire Ant Mound in Sandy Soil')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Fire_ant_mound_%2816371103174%29.jpg/960px-Fire_ant_mound_%2816371103174%29.jpg" alt="Ant Mound" loading="lazy" />
+          <div class="gallery-caption-overlay">
+            <span class="gallery-caption-title">Surface Mound Entrance</span>
+            <span class="gallery-caption-sub">Thermoregulated Soil Dome</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Solenopsis_fire_ant.jpg/960px-Solenopsis_fire_ant.jpg', 'Close-up of Solenopsis Fire Ant Worker with Stinger')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Solenopsis_fire_ant.jpg/960px-Solenopsis_fire_ant.jpg" alt="Solenopsis Worker" loading="lazy" />
+          <div class="gallery-caption-overlay">
+            <span class="gallery-caption-title">Stinger & Gaster Macro</span>
+            <span class="gallery-caption-sub">Solenopsin Delivery System</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox('https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Fire_ant_eggs.jpg/960px-Fire_ant_eggs.jpg', 'Fire Ant Nursery Eggs and Larvae')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Fire_ant_eggs.jpg/960px-Fire_ant_eggs.jpg" alt="Fire Ant Eggs" loading="lazy" />
+          <div class="gallery-caption-overlay">
+            <span class="gallery-caption-title">Nursery Chambers & Eggs</span>
+            <span class="gallery-caption-sub">Venom-Disinfected Brood</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox('https://upload.wikimedia.org/wikipedia/commons/d/d2/Solenopsis_invicta_casent0005804_head_1.jpg', 'Macro Head Shot of Solenopsis invicta Specimen')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Solenopsis_invicta_casent0005804_head_1.jpg" alt="Head Specimen" loading="lazy" />
+          <div class="gallery-caption-overlay">
+            <span class="gallery-caption-title">Antennae & Compound Eyes</span>
+            <span class="gallery-caption-sub">AntWeb Specimen CASENT0005804</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Interactive Survival Quiz -->
+    <section id="quiz" style="margin-top: 5rem;">
+      <div class="section-header">
+        <span class="section-tag">Knowledge Check</span>
+        <h2 class="section-title">Fire Ant Superorganism Quiz</h2>
+        <p class="section-desc">
+          Test what you've learned about the physics, biology, and chemistry of fire ants.
+        </p>
+      </div>
+
+      <div class="quiz-card">
+        <div class="quiz-question-counter" id="quiz-counter">Question 1 of 5</div>
+        <div class="quiz-question-text" id="quiz-question">Loading question...</div>
+        
+        <div class="quiz-options-list" id="quiz-options"></div>
+
+        <div class="quiz-explanation" id="quiz-explanation"></div>
+        <button class="quiz-next-btn" id="quiz-next" onclick="nextQuizQuestion()">Next Question ➔</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>
+        Hosted directly on <strong>myclaw.gajendrasinghdawar.tech/fireants</strong> | Designed with high-performance inline CSS & JavaScript.
+      </p>
+      <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+        Scientific references: Journal of Experimental Biology, Nature Genetics, USDA Agricultural Research Service, Georgia Tech Biofluids Lab.
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+      <img id="lightbox-img" src="" alt="Enlarged view" />
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       INLINE JAVASCRIPT: SIMULATOR, AUDIO SYNTHESIS, QUIZ & INTERACTIONS
+       ========================================================================== -->
+  <script>
+    /* --------------------------------------------------------------------------
+       THEME TOGGLE
+       -------------------------------------------------------------------------- */
+    const themeBtn = document.getElementById('theme-toggle');
+    let currentTheme = 'default';
+    themeBtn.addEventListener('click', () => {
+      if (currentTheme === 'default') {
+        document.documentElement.setAttribute('data-theme', 'amber');
+        currentTheme = 'amber';
+        themeBtn.innerHTML = '<span>🔥 Flame Mode</span>';
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        currentTheme = 'default';
+        themeBtn.innerHTML = '<span>✨ Amber Mode</span>';
+      }
+    });
+
+    /* --------------------------------------------------------------------------
+       BACKGROUND CANVAS PARTICLES (Floating Spores & Ants)
+       -------------------------------------------------------------------------- */
+    const bgCanvas = document.getElementById('ant-canvas-bg');
+    const bgCtx = bgCanvas.getContext('2d');
+    let bgWidth, bgHeight;
+    let bgParticles = [];
+
+    function resizeBg() {
+      bgWidth = bgCanvas.width = window.innerWidth;
+      bgHeight = bgCanvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeBg);
+    resizeBg();
+
+    for (let i = 0; i < 45; i++) {
+      bgParticles.push({
+        x: Math.random() * bgWidth,
+        y: Math.random() * bgHeight,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        size: Math.random() * 2 + 1,
+        alpha: Math.random() * 0.5 + 0.1,
+        color: Math.random() > 0.4 ? '#f97316' : '#ef4444'
+      });
+    }
+
+    function animateBg() {
+      bgCtx.clearRect(0, 0, bgWidth, bgHeight);
+      bgParticles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0) p.x = bgWidth;
+        if (p.x > bgWidth) p.x = 0;
+        if (p.y < 0) p.y = bgHeight;
+        if (p.y > bgHeight) p.y = 0;
+
+        bgCtx.fillStyle = p.color;
+        bgCtx.globalAlpha = p.alpha;
+        bgCtx.beginPath();
+        bgCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        bgCtx.fill();
+      });
+      bgCtx.globalAlpha = 1.0;
+      requestAnimationFrame(animateBg);
+    }
+    animateBg();
+
+    /* --------------------------------------------------------------------------
+       FILTER CHIPS FOR THE 10 FACTS
+       -------------------------------------------------------------------------- */
+    const filterChips = document.querySelectorAll('.filter-chip');
+    const factCards = document.querySelectorAll('.fact-card');
+
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        filterChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        const filter = chip.getAttribute('data-filter');
+
+        factCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    /* --------------------------------------------------------------------------
+       INTERACTIVE RAFT SIMULATOR
+       -------------------------------------------------------------------------- */
+    const raftCanvas = document.getElementById('raft-canvas');
+    const raftCtx = raftCanvas.getContext('2d');
+    let raftWidth, raftHeight;
+    let raftAnts = [];
+    let raftCenter = { x: 0, y: 0 };
+    let mouse = { x: -100, y: -100, isDown: false };
+    let waterWavePhase = 0;
+
+    function resizeRaftCanvas() {
+      const rect = raftCanvas.parentElement.getBoundingClientRect();
+      raftWidth = raftCanvas.width = rect.width;
+      raftHeight = raftCanvas.height = rect.height;
+      raftCenter = { x: raftWidth / 2, y: raftHeight / 2 };
+    }
+    window.addEventListener('resize', resizeRaftCanvas);
+    resizeRaftCanvas();
+
+    class RaftAnt {
+      constructor(isQueen = false) {
+        this.isQueen = isQueen;
+        this.reset();
+      }
+
+      reset() {
+        const angle = Math.random() * Math.PI * 2;
+        const dist = this.isQueen ? Math.random() * 15 : Math.random() * 90 + 10;
+        this.targetX = raftCenter.x + Math.cos(angle) * dist;
+        this.targetY = raftCenter.y + Math.sin(angle) * dist * 0.6;
+        this.x = this.targetX + (Math.random() - 0.5) * 40;
+        this.y = this.targetY + (Math.random() - 0.5) * 40;
+        this.vx = 0;
+        this.vy = 0;
+        this.radius = this.isQueen ? 8 : 4;
+        this.color = this.isQueen ? '#fbbf24' : '#ea580c';
+        this.angle = Math.random() * Math.PI * 2;
+      }
+
+      update(cohesion, waveAmp) {
+        // Wave displacement
+        const waveOffset = Math.sin(waterWavePhase + this.x * 0.02) * (waveAmp * 0.2);
+
+        // Cohesion force pulling towards target center
+        const dx = (this.targetX) - this.x;
+        const dy = (this.targetY + waveOffset) - this.y;
+        this.vx += dx * (cohesion * 0.001);
+        this.vy += dy * (cohesion * 0.001);
+
+        // Repel from mouse when clicked or dragged
+        if (mouse.isDown) {
+          const mdx = this.x - mouse.x;
+          const mdy = this.y - mouse.y;
+          const dist = Math.hypot(mdx, mdy);
+          if (dist < 80) {
+            const force = (80 - dist) / 80;
+            this.vx += (mdx / (dist || 1)) * force * 5;
+            this.vy += (mdy / (dist || 1)) * force * 5;
+          }
+        }
+
+        // Damping
+        this.vx *= 0.88;
+        this.vy *= 0.88;
+
+        this.x += this.vx;
+        this.y += this.vy;
+
+        // Face movement
+        if (Math.hypot(this.vx, this.vy) > 0.2) {
+          this.angle = Math.atan2(this.vy, this.vx);
+        }
+      }
+
+      draw() {
+        raftCtx.save();
+        raftCtx.translate(this.x, this.y);
+        raftCtx.rotate(this.angle);
+
+        // Draw small ant body
+        raftCtx.fillStyle = this.color;
+        
+        // Head
+        raftCtx.beginPath();
+        raftCtx.arc(this.radius * 0.8, 0, this.radius * 0.5, 0, Math.PI * 2);
+        raftCtx.fill();
+
+        // Thorax
+        raftCtx.beginPath();
+        raftCtx.arc(0, 0, this.radius * 0.4, 0, Math.PI * 2);
+        raftCtx.fill();
+
+        // Gaster (Abdomen)
+        raftCtx.beginPath();
+        raftCtx.arc(-this.radius * 0.9, 0, this.radius * 0.7, 0, Math.PI * 2);
+        raftCtx.fill();
+
+        // Legs (interlinking lines)
+        raftCtx.strokeStyle = 'rgba(249, 115, 22, 0.45)';
+        raftCtx.lineWidth = 1;
+        raftCtx.beginPath();
+        raftCtx.moveTo(0, 0);
+        raftCtx.lineTo(this.radius * 1.5, -this.radius * 1.4);
+        raftCtx.moveTo(0, 0);
+        raftCtx.lineTo(this.radius * 1.5, this.radius * 1.4);
+        raftCtx.moveTo(0, 0);
+        raftCtx.lineTo(-this.radius * 1.5, -this.radius * 1.4);
+        raftCtx.moveTo(0, 0);
+        raftCtx.lineTo(-this.radius * 1.5, this.radius * 1.4);
+        raftCtx.stroke();
+
+        raftCtx.restore();
+      }
+    }
+
+    function initRaftAnts(count) {
+      raftAnts = [];
+      // 1 Queen in center
+      raftAnts.push(new RaftAnt(true));
+      for (let i = 1; i < count; i++) {
+        raftAnts.push(new RaftAnt(false));
+      }
+    }
+    initRaftAnts(120);
+
+    // Mouse events
+    raftCanvas.addEventListener('mousedown', e => {
+      mouse.isDown = true;
+      setMousePos(e);
+    });
+    window.addEventListener('mouseup', () => mouse.isDown = false);
+    raftCanvas.addEventListener('mousemove', setMousePos);
+
+    raftCanvas.addEventListener('touchstart', e => {
+      mouse.isDown = true;
+      setTouchPos(e);
+    });
+    window.addEventListener('touchend', () => mouse.isDown = false);
+    raftCanvas.addEventListener('touchmove', setTouchPos);
+
+    function setMousePos(e) {
+      const rect = raftCanvas.getBoundingClientRect();
+      mouse.x = (e.clientX - rect.left) * (raftCanvas.width / rect.width);
+      mouse.y = (e.clientY - rect.top) * (raftCanvas.height / rect.height);
+    }
+    function setTouchPos(e) {
+      if (!e.touches[0]) return;
+      const rect = raftCanvas.getBoundingClientRect();
+      mouse.x = (e.touches[0].clientX - rect.left) * (raftCanvas.width / rect.width);
+      mouse.y = (e.touches[0].clientY - rect.top) * (raftCanvas.height / rect.height);
+    }
+
+    const popSlider = document.getElementById('sim-pop');
+    const tensionSlider = document.getElementById('sim-tension');
+    const waveSlider = document.getElementById('sim-wave');
+
+    popSlider.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value);
+      document.getElementById('label-pop').innerText = val + ' Ants';
+      initRaftAnts(val);
+    });
+    tensionSlider.addEventListener('input', (e) => {
+      document.getElementById('label-tension').innerText = e.target.value + '%';
+    });
+    waveSlider.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value);
+      document.getElementById('label-wave').innerText = val > 70 ? 'Violent Current' : val > 30 ? 'Moderate Waves' : 'Gentle Current';
+    });
+
+    document.getElementById('btn-reset-raft').addEventListener('click', () => {
+      initRaftAnts(parseInt(popSlider.value));
+    });
+
+    document.getElementById('btn-drop-rain').addEventListener('click', () => {
+      raftAnts.forEach(ant => {
+        ant.vx += (Math.random() - 0.5) * 15;
+        ant.vy += (Math.random() - 0.5) * 15;
+      });
+    });
+
+    function renderRaftSim() {
+      raftCtx.fillStyle = '#061120';
+      raftCtx.fillRect(0, 0, raftWidth, raftHeight);
+
+      waterWavePhase += 0.03;
+      const waveAmp = parseFloat(waveSlider.value);
+      const cohesion = parseFloat(tensionSlider.value);
+
+      // Draw water ripples
+      raftCtx.strokeStyle = 'rgba(6, 182, 212, 0.15)';
+      raftCtx.lineWidth = 2;
+      for (let y = 30; y < raftHeight; y += 40) {
+        raftCtx.beginPath();
+        for (let x = 0; x < raftWidth; x += 15) {
+          const dy = Math.sin(waterWavePhase + x * 0.015 + y * 0.02) * (waveAmp * 0.15);
+          if (x === 0) raftCtx.moveTo(x, y + dy);
+          else raftCtx.lineTo(x, y + dy);
+        }
+        raftCtx.stroke();
+      }
+
+      // Draw air bubble halo (Plastron effect) around raft
+      raftCtx.fillStyle = 'rgba(6, 182, 212, 0.06)';
+      raftCtx.beginPath();
+      raftCtx.ellipse(raftCenter.x, raftCenter.y, 140, 90, 0, 0, Math.PI * 2);
+      raftCtx.fill();
+
+      // Draw connecting elastic fibers between close ants
+      raftCtx.strokeStyle = 'rgba(249, 115, 22, 0.25)';
+      raftCtx.lineWidth = 1;
+      for (let i = 0; i < raftAnts.length; i++) {
+        for (let j = i + 1; j < raftAnts.length; j++) {
+          const dx = raftAnts[i].x - raftAnts[j].x;
+          const dy = raftAnts[i].y - raftAnts[j].y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < 32) {
+            raftCtx.beginPath();
+            raftCtx.moveTo(raftAnts[i].x, raftAnts[i].y);
+            raftCtx.lineTo(raftAnts[j].x, raftAnts[j].y);
+            raftCtx.stroke();
+          }
+        }
+      }
+
+      // Update and draw ants
+      raftAnts.forEach(ant => {
+        ant.update(cohesion, waveAmp);
+        ant.draw();
+      });
+
+      requestAnimationFrame(renderRaftSim);
+    }
+    renderRaftSim();
+
+    function scrollToSim() {
+      document.getElementById('raft-sim').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    /* --------------------------------------------------------------------------
+       WEB AUDIO API: STRIDULATION ACOUSTIC SYNTHESIS (~500 Hz CHIRP)
+       -------------------------------------------------------------------------- */
+    let audioCtx = null;
+    function synthesizeStridulation() {
+      try {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+
+        const now = audioCtx.currentTime;
+        // Create 4 rapid chirp bursts
+        for (let i = 0; i < 4; i++) {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+
+          osc.type = 'sawtooth';
+          // Sweep from 480 Hz to 540 Hz (mimicking microscopic postpetiole file rasping)
+          osc.frequency.setValueAtTime(460, now + i * 0.12);
+          osc.frequency.exponentialRampToValueAtTime(540, now + i * 0.12 + 0.08);
+
+          gain.gain.setValueAtTime(0, now + i * 0.12);
+          gain.gain.linearRampToValueAtTime(0.25, now + i * 0.12 + 0.02);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.12 + 0.09);
+
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+
+          osc.start(now + i * 0.12);
+          osc.stop(now + i * 0.12 + 0.1);
+        }
+      } catch (err) {
+        console.log('Audio not supported or blocked:', err);
+      }
+    }
+
+    function playBeep() {
+      try {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.frequency.value = 880;
+        gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.2);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.2);
+      } catch(e) {}
+    }
+
+    /* --------------------------------------------------------------------------
+       LIGHTBOX VIEWER
+       -------------------------------------------------------------------------- */
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(src, caption) {
+      lightboxImg.src = src;
+      lightboxCaption.innerText = caption || '';
+      lightbox.classList.add('active');
+    }
+
+    function closeLightbox(e) {
+      if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
+        lightbox.classList.remove('active');
+      }
+    }
+
+    function showAnatomyModal() {
+      openLightbox(
+        'https://upload.wikimedia.org/wikipedia/commons/d/d2/Solenopsis_invicta_casent0005804_head_1.jpg',
+        'Fire Ant Head Anatomy: Serrated Mandibles, 10-segmented Antennae & 2-Segmented Club'
+      );
+    }
+
+    /* --------------------------------------------------------------------------
+       INTERACTIVE TRIVIA QUIZ
+       -------------------------------------------------------------------------- */
+    const quizData = [
+      {
+        q: "How do fire ants stay alive underwater on their floating life rafts?",
+        options: [
+          "They hold their breath until the flood water drains away.",
+          "Their hydrophobic hairs trap a protective air bubble layer called a plastron.",
+          "Only the queen survives; all worker ants drown.",
+          "They absorb dissolved oxygen directly through their antennae."
+        ],
+        correct: 1,
+        explanation: "Fire ant exoskeletons are covered in fine, water-repelling cuticular hairs that trap an insulating air cushion (plastron). This allows even the bottom-most submerged ants to breathe and prevents water from penetrating their spiracles."
+      },
+      {
+        q: "What makes fire ant venom unique compared to standard bees and wasps?",
+        options: [
+          "It is made of 95% oil-based piperidine alkaloids (solenopsin), causing sterile burning blisters.",
+          "It is 100% pure formic acid.",
+          "It contains no toxins, only numbing saliva.",
+          "It is delivered through their teeth rather than a stinger."
+        ],
+        correct: 0,
+        explanation: "Unlike wasps and bees whose venom is largely aqueous protein mixtures, fire ant venom is primarily oily piperidine alkaloids called solenopsin. This kills cell membranes, producing an intense fiery sensation and characteristic white sterile pustules."
+      },
+      {
+        q: "Why do fire ants frequently cause electrical equipment and traffic light short circuits?",
+        options: [
+          "They eat copper wires for dietary mineral nutrition.",
+          "Shocked ants release alarm pheromones in muscle spasms, attracting a suicidal swarm to the contacts.",
+          "They build their queens out of lead solder.",
+          "Electrical currents resemble solar heat frequencies."
+        ],
+        correct: 1,
+        explanation: "When an ant bridges two live contacts, the electrical shock triggers convulsions that release alarm pheromones. Nestmates rush to defend the site, accumulating in massive piles that trip circuit breakers."
+      },
+      {
+        q: "What is the biological role of the locked 'Social Supergene' (Gp-9 locus)?",
+        options: [
+          "It gives fire ants their distinct reddish-amber body pigment.",
+          "It determines whether colonies are single-queen (monogyne) or accept hundreds of queens (polygyne).",
+          "It controls whether workers develop functional wings.",
+          "It provides complete immunity to insecticides."
+        ],
+        correct: 1,
+        explanation: "The Gp-9 supergene contains more than 600 locked genes. Colonies with the BB genotype maintain only a single queen and kill foreign queens, while colonies with the Bb genotype welcome hundreds of queens, allowing huge multi-nest supercolonies to form."
+      },
+      {
+        q: "What happens when a female Phorid fly attacks a worker fire ant?",
+        options: [
+          "The fly feeds on the ant's venom and gets poisoned.",
+          "The fly injects an egg into the ant; the larva devours the brain and decapitates the ant's head.",
+          "The ant captures the fly and feeds it to the queen.",
+          "The ant absorbs the fly's wings to fly during mating season."
+        ],
+        correct: 1,
+        explanation: "Pseudacteon phorid flies are parasitoids. The female injects an egg into the ant's body. The maggot travels into the head capsule, consumes hemolymph, and releases enzymes that dissolve the neck tissue, popping the ant's head off so the fly can pupate."
+      }
+    ];
+
+    let currentQuizIndex = 0;
+    let quizScore = 0;
+    let answered = false;
+
+    const quizCounter = document.getElementById('quiz-counter');
+    const quizQuestion = document.getElementById('quiz-question');
+    const quizOptions = document.getElementById('quiz-options');
+    const quizExplanation = document.getElementById('quiz-explanation');
+    const quizNextBtn = document.getElementById('quiz-next');
+
+    function loadQuizQuestion(index) {
+      answered = false;
+      quizNextBtn.style.display = 'none';
+      quizExplanation.style.display = 'none';
+
+      const data = quizData[index];
+      quizCounter.innerText = `Question ${index + 1} of ${quizData.length}`;
+      quizQuestion.innerText = data.q;
+      quizOptions.innerHTML = '';
+
+      data.options.forEach((optText, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-option-btn';
+        btn.innerHTML = `<span>${optText}</span>`;
+        btn.addEventListener('click', () => selectQuizOption(i, btn));
+        quizOptions.appendChild(btn);
+      });
+    }
+
+    function selectQuizOption(selectedIndex, btnElement) {
+      if (answered) return;
+      answered = true;
+
+      const data = quizData[currentQuizIndex];
+      const allBtns = quizOptions.querySelectorAll('.quiz-option-btn');
+
+      if (selectedIndex === data.correct) {
+        btnElement.classList.add('correct');
+        btnElement.innerHTML += ' <span>✓ Correct</span>';
+        quizScore++;
+      } else {
+        btnElement.classList.add('wrong');
+        btnElement.innerHTML += ' <span>✗ Incorrect</span>';
+        allBtns[data.correct].classList.add('correct');
+        allBtns[data.correct].innerHTML += ' <span>(Correct Answer)</span>';
+      }
+
+      quizExplanation.innerHTML = `<strong>💡 Explanation:</strong> ${data.explanation}`;
+      quizExplanation.style.display = 'block';
+      quizNextBtn.style.display = 'inline-block';
+    }
+
+    function nextQuizQuestion() {
+      currentQuizIndex++;
+      if (currentQuizIndex < quizData.length) {
+        loadQuizQuestion(currentQuizIndex);
+      } else {
+        // Quiz complete
+        quizCounter.innerText = 'Quiz Completed!';
+        quizQuestion.innerText = `🏆 You scored ${quizScore} out of ${quizData.length}!`;
+        quizOptions.innerHTML = `
+          <div style="text-align:center; padding: 1.5rem 0;">
+            <p style="color:#cbd5e1; font-size:1.1rem; margin-bottom:1.5rem;">
+              ${quizScore === 5 ? '🔥 Master Entomologist! You know the fire ant superorganism inside and out!' : 'Great job exploring the fascinating biology of fire ants!'}
+            </p>
+            <button class="btn-sim btn-sim-primary" onclick="restartQuiz()" style="display:inline-block; padding:0.75rem 2rem; border-radius:9999px;">
+              🔄 Retake Quiz
+            </button>
+          </div>
+        `;
+        quizExplanation.style.display = 'none';
+        quizNextBtn.style.display = 'none';
+      }
+    }
+
+    function restartQuiz() {
+      currentQuizIndex = 0;
+      quizScore = 0;
+      loadQuizQuestion(0);
+    }
+
+    // Initialize Quiz
+    loadQuizQuestion(0);
+  </script>
+</body>
+</html>
